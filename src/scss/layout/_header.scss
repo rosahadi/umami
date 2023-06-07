@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  height: calc(100vh - 22px);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)),
+    url(../img/header-1c.jpg);
+  background-size: cover;
+  background-position: right top;
+  padding: 2.2rem 7rem;
+
+  @media (max-width: $bp-large) {
+    height: calc(100vh - 10px);
+    padding: 2.2rem 5rem;
+  }
+  @media (max-width: $bp-small) {
+    padding: 0;
+  }
+
+  &__svg-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 4;
+    margin-bottom: -1.1rem;
+    cursor: pointer;
+
+    @media (max-width: $bp-largest) {
+      margin-bottom: -1.3rem;
+    }
+  }
+
+  &__arrow-down {
+    position: absolute;
+    height: 2.5rem;
+    width: 3rem;
+    cursor: pointer;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    z-index: 10;
+  }
+}
+
+.heading-primary {
+  margin-bottom: 1.3rem;
+}
+
+.header__paragraph {
+  color: $color-white;
+}

@@ -1,0 +1,204 @@
+.navigation {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 3.6rem 3.6rem 2rem;
+  z-index: 20;
+
+  @media (max-width: $bp-medium) {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2.8rem;
+  }
+
+  &__logo {
+    flex-basis: 56%;
+    padding-left: 5rem;
+    fill: $color-white;
+
+    @media (max-width: $bp-large) {
+      padding-left: 0;
+    }
+
+    @media (max-width: $bp-medium) {
+      transform: scale(0.8);
+    }
+  }
+
+  &__logo--svg {
+    fill: $color-white;
+  }
+
+  // Navigation active
+  &.active {
+    background-color: $color-white;
+  }
+
+  &.active &__logo--svg {
+    fill: $color-grey-dark-3;
+  }
+
+  &.active &__bar &__link {
+    color: $color-grey-dark-3;
+  }
+
+  &.active &__bar &__link .underline {
+    background-color: $color-grey-dark-3;
+  }
+
+  &.active &__toggle .line {
+    background-color: $color-grey-dark-3;
+  }
+
+  // Start Toggle
+
+  &__toggle {
+    position: absolute;
+    display: none;
+    top: 2.6rem;
+    left: 2rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 25;
+    cursor: pointer;
+    transition: $transition;
+
+    @media (max-width: $bp-medium) {
+      display: block;
+    }
+  }
+
+  &__toggle .line {
+    display: block;
+    width: 3rem;
+    height: 2px;
+    border-radius: 4rem;
+    background-color: $color-white;
+    z-index: 3;
+    transition: $transition;
+  }
+
+  &__toggle .line:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+
+  &__toggle .hide {
+    transition: 0s;
+    visibility: hidden;
+  }
+
+  // Toggle Active
+
+  &__toggle.active {
+    left: 29%;
+  }
+
+  &__toggle.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  &__toggle.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  // End toggle
+
+  &__bar {
+    padding-right: 5rem;
+    flex-basis: 44%;
+    display: flex;
+    justify-content: flex-end;
+    transition: $transition;
+
+    @media (max-width: $bp-large) {
+      padding-right: 0;
+    }
+
+    @media (max-width: $bp-medium) {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -19rem;
+      height: 100%;
+      background-color: rgb(31, 31, 31);
+      z-index: 20;
+      padding-right: 4rem;
+      padding-left: 4rem;
+      padding-top: 8rem;
+    }
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+    transition: $transition;
+
+    @media (max-width: $bp-medium) {
+      display: block;
+      padding-top: 4rem;
+    }
+  }
+
+  & ul li {
+    flex: 1;
+    padding: 0 1rem;
+    text-align: left !important;
+
+    @media (max-width: $bp-medium) {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    font-size: 1.8rem;
+    color: $color-white;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+
+    @media (max-width: $bp-medium) {
+      font-size: 2rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-white;
+  }
+
+  &__link .underline {
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -4px;
+    background-color: $color-white;
+    transition: $transition;
+    display: block;
+  }
+  &__link:hover .underline {
+    left: 0;
+    width: 100%;
+  }
+
+  // Show nav bar
+  &__bar.show {
+    width: 38%;
+    left: 0;
+  }
+
+  &__bar.show &__link {
+    color: $color-grey-light-1 !important;
+  }
+
+  &__bar.show &__link:hover,
+  &__bar.show &__link:active {
+    color: $color-grey-light-1 !important;
+  }
+}

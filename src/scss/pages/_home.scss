@@ -1,0 +1,36 @@
+.navigation__bar ul li,
+.header .text,
+section .text,
+menu .lightbox,
+footer {
+  text-align: center;
+}
+
+.header,
+.recipes,
+.fixed-image {
+  position: relative;
+}
+
+.header .text,
+.recipes .text,
+.fixed-image .text {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-us p,
+.menu p,
+.reservation p {
+  margin: 1.8rem 0 3rem 0;
+
+  @media (max-width: $bp-largest) {
+    margin: 1.8rem 0 1.5rem 0;
+  }
+
+  @media (max-width: $bp-large) {
+    margin: 2rem 0 2.5rem 0;
+  }
+}

@@ -1,0 +1,51 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 5.2rem;
+  padding: 6rem;
+
+  @media (max-width: $bp-largest) {
+    padding: 6rem 4rem;
+  }
+
+  @media (max-width: $bp-large) {
+    display: block;
+  }
+
+  & .text {
+    padding-bottom: 4rem;
+    flex: 50%;
+
+    @media (max-width: $bp-largest) {
+      padding-bottom: 3rem;
+    }
+
+    @media (max-width: $bp-largest) {
+      padding: 2rem 2rem 0 2rem;
+    }
+  }
+
+  &__img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    flex: 50%;
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+  &__img .active {
+    animation: scale 0.5s;
+  }
+
+  @keyframes scale {
+    from {
+      transform: scale(0, 0);
+    }
+    to {
+      transform: scale(1, 1);
+    }
+  }
+}

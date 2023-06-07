@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umami Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Herr+Von+Muellerhoff&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/scss/main.scss" />
+
+    <script type="module" src="src/main.js"></script>
+  </head>
+  <body>
+    <!-- Start Dots -->
+    <div class="dots">
+      <div class="one active" data-x="header"></div>
+      <div class="two" data-x="recipes"></div>
+      <div class="three" data-x="fixed-image"></div>
+    </div>
+    <!-- End Dots -->
+
+    <!-- Start Header -->
+    <header id="header" class="header">
+      <nav class="navigation">
+        <div class="navigation__logo">
+          <a class="navigation__logo-a" href="#"
+            ><svg
+              class="navigation__logo--svg"
+              width="113"
+              height="33"
+              viewBox="0 0 113 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.815 21.42C6.845 21.42 5.215 21.04 3.925 20.28C2.645 19.51 1.69 18.425 1.06 17.025C0.43 15.625 0.115 13.965 0.115 12.045V-1.43051e-06H3.385V11.19C3.385 12.16 3.455 13.08 3.595 13.95C3.745 14.82 4.01 15.585 4.39 16.245C4.77 16.905 5.315 17.425 6.025 17.805C6.745 18.185 7.675 18.375 8.815 18.375C9.965 18.375 10.895 18.185 11.605 17.805C12.325 17.425 12.875 16.905 13.255 16.245C13.635 15.575 13.895 14.81 14.035 13.95C14.175 13.08 14.245 12.16 14.245 11.19V-1.43051e-06H17.515V12.045C17.515 13.965 17.2 15.625 16.57 17.025C15.94 18.425 14.98 19.51 13.69 20.28C12.41 21.04 10.785 21.42 8.815 21.42ZM23.811 21L26.661 -1.43051e-06H29.406L34.746 10.05L40.056 -1.43051e-06H42.816L45.651 21H42.231L40.161 4.44L41.031 4.605L34.776 16.26L28.431 4.62L29.301 4.455L27.231 21H23.811ZM63.8097 15.63H54.8997V12.705H63.8097V15.63ZM58.9047 3.195H59.8047L53.5197 21H50.2197L57.7197 -1.43051e-06H60.9897L68.4897 21H65.1897L58.9047 3.195ZM73.0532 21L75.9032 -1.43051e-06H78.6482L83.9882 10.05L89.2982 -1.43051e-06H92.0582L94.8932 21H91.4732L89.4032 4.44L90.2732 4.605L84.0182 16.26L77.6732 4.62L78.5432 4.455L76.4732 21H73.0532ZM101.505 21V-1.43051e-06H104.775V21H101.505Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="navigation__toggle">
+          <span class="line first"></span>
+          <span class="line middle"></span>
+          <span class="line last"></span>
+        </div>
+
+        <div class="navigation__bar">
+          <ul>
+            <li>
+              <a class="navigation__link" href="#"
+                >Home<span class="underline"></span
+              ></a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#"
+                >Menu<span class="underline"></span
+              ></a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#"
+                >Reservations<span class="underline"></span
+              ></a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#"
+                >Contact<span class="underline"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="header__text text">
+        <h2>Welcome</h2>
+        <h1 class="heading-primary heading--white">Umami Restaurant</h1>
+        <p class="header__paragraph">
+          Where culinary artistry and delectable flavors merge to create an
+          unforgettable dining experience.
+        </p>
+      </div>
+
+      <div class="header__arrow">
+        <svg
+          class="header__svg-down"
+          width="192"
+          height="61"
+          viewBox="0 0 192 61"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_23_15)">
+            <path
+              d="M95.9504 61C95.9504 61 117.871 58.322 138.7 55.6439C159.529 52.9659 179.367 50.2878 175.002 50.2878C153.479 50.2878 141.18 37.6911 130.467 25.0943C119.755 12.4976 110.828 0 95.9504 0C81.0724 0 72.0464 12.5967 61.3342 25.1935C50.622 37.7902 38.422 50.387 16.8984 50.387C12.6333 50.387 10.4512 50.387 20.3699 51.6764C30.2886 52.9659 52.209 55.6439 95.9504 61Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_23_15">
+              <rect width="192" height="61" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <div class="header__arrow-down">
+          <img src="src/img/arrow-down.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start About Us-->
+    <section class="about-us">
+      <div class="text">
+        <h2>Discover</h2>
+        <h3 class="heading--black">Our Story</h3>
+        <p>
+          Umami is more than just a taste; it's a journey of discovery. We
+          invite you to embark on a culinary adventure as you explore our menu
+          filled with authentic Asian delicacies. FFrom the savory depth of miso
+          soup to the delicate balance of sushi rolls, each dish is a culinary
+          masterpiece that embodies the essence of Asian cuisine.
+        </p>
+        <div><a class="CTA-link" href="#">About Us</a></div>
+      </div>
+
+      <div class="image-container">
+        <div class="image image__1">
+          <img src="src/img/ramen.jpg" alt="Food Photo" />
+        </div>
+        <div class="image image__2">
+          <img src="src/img/sushi.jpg" alt="Food Photo" />
+        </div>
+      </div>
+    </section>
+    <!-- End About Us -->
+
+    <!-- Start Recipes -->
+    <section id="recipes" class="recipes">
+      <div class="image"></div>
+      <div class="text">
+        <h2>Tasteful</h2>
+        <h3 class="heading--white">Recipes</h3>
+      </div>
+    </section>
+    <!-- End Recipes -->
+
+    <!-- Start Menu -->
+    <section class="menu">
+      <div class="menu__img-container">
+        <div class="menu__img active">
+          <img src="src/img/menu-1.jpg" alt="Food Photo" />
+        </div>
+        <div class="menu__img">
+          <img src="src/img/menu-2.jpg" alt="Food Photo" />
+        </div>
+        <div class="menu__img">
+          <img src="src/img/menu-3.jpg" alt="Food Photo" />
+        </div>
+        <div class="menu__img">
+          <img src="src/img/menu-4.jpg" alt="Food Photo" />
+        </div>
+      </div>
+
+      <div class="text">
+        <h2>Discover</h2>
+        <h3 class="heading--black">Menu</h3>
+        <p>
+          Explore our tantalizing menu, where Asian flavors harmonize to create
+          an unforgettable culinary experience that satisfies every craving.
+        </p>
+        <div><a class="CTA-link" href="#">Explore Full Menu</a></div>
+      </div>
+    </section>
+    <!-- End Menu -->
+
+    <!--Start fixed-img -->
+    <section class="fixed-image">
+      <div class="text">
+        <h2>The Umami</h2>
+        <h3 class="heading--white">Fusion</h3>
+      </div>
+    </section>
+    <!--End fixed-img -->
+
+    <!-- Start Reservation -->
+    <section class="reservation">
+      <div class="text">
+        <h2>Reserve</h2>
+        <h3 class="heading--black">Your Umami Experience</h3>
+        <p>
+          Join us at Umami Restaurant, where unforgettable flavors and good
+          times await. Indulge in our exquisite Asian creations, crafted with
+          passion and artistry. We promise to delight your palate and create
+          lasting memories. Book now and embark on a culinary journey like no
+          other.
+        </p>
+        <div><a class="CTA-link" href="#">Make a Reservation</a></div>
+      </div>
+      <div class="image-container">
+        <div class="image image__1">
+          <img src="src/img/ramen-21.jpg" alt="Food Photo" />
+        </div>
+        <div class="image image__2">
+          <img src="src/img/sushi-21.jpg" alt="Food Photo" />
+        </div>
+      </div>
+    </section>
+    <!-- End Reservation -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+      <div class="footer__logo">
+        <a href="#"
+          ><svg
+            width="113"
+            height="33"
+            viewBox="0 0 113 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.815 21.42C6.845 21.42 5.215 21.04 3.925 20.28C2.645 19.51 1.69 18.425 1.06 17.025C0.43 15.625 0.115 13.965 0.115 12.045V-1.43051e-06H3.385V11.19C3.385 12.16 3.455 13.08 3.595 13.95C3.745 14.82 4.01 15.585 4.39 16.245C4.77 16.905 5.315 17.425 6.025 17.805C6.745 18.185 7.675 18.375 8.815 18.375C9.965 18.375 10.895 18.185 11.605 17.805C12.325 17.425 12.875 16.905 13.255 16.245C13.635 15.575 13.895 14.81 14.035 13.95C14.175 13.08 14.245 12.16 14.245 11.19V-1.43051e-06H17.515V12.045C17.515 13.965 17.2 15.625 16.57 17.025C15.94 18.425 14.98 19.51 13.69 20.28C12.41 21.04 10.785 21.42 8.815 21.42ZM23.811 21L26.661 -1.43051e-06H29.406L34.746 10.05L40.056 -1.43051e-06H42.816L45.651 21H42.231L40.161 4.44L41.031 4.605L34.776 16.26L28.431 4.62L29.301 4.455L27.231 21H23.811ZM63.8097 15.63H54.8997V12.705H63.8097V15.63ZM58.9047 3.195H59.8047L53.5197 21H50.2197L57.7197 -1.43051e-06H60.9897L68.4897 21H65.1897L58.9047 3.195ZM73.0532 21L75.9032 -1.43051e-06H78.6482L83.9882 10.05L89.2982 -1.43051e-06H92.0582L94.8932 21H91.4732L89.4032 4.44L90.2732 4.605L84.0182 16.26L77.6732 4.62L78.5432 4.455L76.4732 21H73.0532ZM101.505 21V-1.43051e-06H104.775V21H101.505Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer__location">
+        <h5>Our Location</h5>
+        <ul>
+          <li>
+            <p>56 12th Ave, New York, NY 10011</p>
+          </li>
+          <li>
+            <a
+              class="direction"
+              href="https://maps.google.com/?q=56+12th+Ave,+New+York,+NY+10011"
+              target="_blank"
+              >Get Directions</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h5>News and Offers</h5>
+        <div>
+          <form class="footer__newsletter--form">
+            <input
+              class="footer__newsletter--email-inp"
+              type="email"
+              required=""
+              name="ne"
+              value=""
+              placeholder="Email"
+            />
+            <button type="submit" class="footer__newsletter--btn">
+              <svg
+                class="btn-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="footer__social-icon--box">
+          <ul class="footer__social-icons">
+            <li class="fb-icon">
+              <a href="#">
+                <svg
+                  viewBox="-5 0 20 20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#ffffff"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>facebook [#ffffff]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Dribbble-Light-Preview"
+                        transform="translate(-385.000000, -7399.000000)"
+                        fill="#ffffff"
+                      >
+                        <g
+                          id="icons"
+                          transform="translate(56.000000, 160.000000)"
+                        >
+                          <path
+                            d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                            id="facebook-[#ffffff]"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+
+            <li class="tweet-icon">
+              <a href="#"
+                ><svg
+                  viewBox="0 -2 20 20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#ffffff"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>twitter [#ffffff]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Dribbble-Light-Preview"
+                        transform="translate(-60.000000, -7521.000000)"
+                        fill="#ffffff"
+                      >
+                        <g
+                          id="icons"
+                          transform="translate(56.000000, 160.000000)"
+                        >
+                          <path
+                            d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
+                            id="twitter-[#ffffff]"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+
+            <li class="insta-icon">
+              <a href="#">
+                <svg
+                  viewBox="0 0 20 20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#ffffff"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>instagram [#ffffff]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Dribbble-Light-Preview"
+                        transform="translate(-340.000000, -7439.000000)"
+                        fill="#ffffff"
+                      >
+                        <g
+                          id="icons"
+                          transform="translate(56.000000, 160.000000)"
+                        >
+                          <path
+                            d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                            id="instagram-[#ffffff]"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+
+            <li class="tripadvisor-icon">
+              <a href="#"
+                ><svg
+                  fill="#ffffff"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 98.566 98.566"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <g>
+                        <path
+                          d="M60.401,20.996c2.751,0.389,5.445,1.08,8.107,1.898c4.647,1.431,9.032,3.419,13.156,5.998 c0.287,0.178,0.67,0.291,1.008,0.291c4.844,0.02,9.686,0.013,14.526,0.017c0.39,0,0.778,0.041,1.167,0.063 c0,0.095,0.014,0.135-0.002,0.157c-0.226,0.348-0.455,0.691-0.682,1.038c-1.643,2.52-3.047,5.156-3.876,8.07 c-0.09,0.313-0.109,0.575,0.103,0.882c4.312,6.192,5.688,12.99,3.886,20.318c-1.58,6.427-5.264,11.438-10.862,14.986 c-4.001,2.537-8.421,3.745-13.143,3.771c-1.984,0.012-3.958-0.255-5.896-0.757c-4.722-1.225-8.77-3.579-12.106-7.144 c-0.44-0.468-0.854-0.957-1.323-1.486c-1.764,2.629-3.5,5.215-5.278,7.869c-1.771-2.646-3.483-5.207-5.191-7.758 c-0.118,0.062-0.152,0.069-0.175,0.091c-0.039,0.032-0.072,0.071-0.103,0.108c-4.035,4.765-9.111,7.686-15.295,8.663 c-3.44,0.545-6.847,0.349-10.188-0.572c-4.735-1.301-8.759-3.799-12.01-7.485c-3.177-3.604-5.153-7.788-5.895-12.545 c-0.849-4.44,0.185-8.721,0.443-9.76c0.748-3.02,2.052-5.793,3.842-8.343c0.126-0.181,0.17-0.501,0.11-0.717 c-0.73-2.677-1.988-5.112-3.461-7.444c-0.374-0.593-0.822-1.142-1.236-1.711c0-0.065,0-0.132,0-0.198 c0.083,0.01,0.165,0.026,0.246,0.026c4.956,0.002,9.911,0.004,14.867-0.006c0.216,0,0.456-0.089,0.64-0.207 c3.482-2.234,7.192-4.004,11.09-5.382c2.811-0.992,5.681-1.766,8.608-2.333c2.834-0.548,5.683-0.934,8.562-1.124 C51.059,19.73,56.669,20.473,60.401,20.996z M54.188,53.727c0,10.883,8.83,19.774,19.674,19.732 c10.885-0.039,19.675-8.68,19.667-19.683c-0.008-11.339-9.206-19.863-20.089-19.642C62.696,34.357,54.286,43.017,54.188,53.727z M24.677,34.059C14.091,33.967,4.861,42.802,5.046,54.056c0.172,10.495,8.822,19.392,19.851,19.297 c10.784-0.092,19.452-8.898,19.472-19.562C44.386,42.835,35.612,34.059,24.677,34.059z M25.653,28.925 c5.98,0.365,11.233,2.449,15.671,6.485c4.429,4.028,7.024,9.053,7.967,14.962c0.97-5.839,3.497-10.817,7.843-14.805 c4.353-3.992,9.536-6.087,15.418-6.53c-6.98-3.103-14.34-4.421-21.916-4.567C42.026,24.301,33.651,25.57,25.653,28.925z"
+                        ></path>
+                        <path
+                          d="M73.822,41.311c6.735-0.011,12.19,5.415,12.19,12.143c0,6.754-5.362,11.975-11.688,12.216 c-7.065,0.271-12.718-5.358-12.716-12.186C61.614,46.578,67.307,41.197,73.822,41.311z M81.766,53.484 c-0.003-4.39-3.552-7.958-7.912-7.958c-4.41,0-8,3.549-8.018,7.926c-0.016,4.358,3.592,7.984,7.961,7.996 C78.173,61.465,81.768,57.866,81.766,53.484z"
+                        ></path>
+                        <path
+                          d="M24.417,41.311c6.731-0.007,12.194,5.429,12.177,12.156c-0.019,6.809-5.386,11.916-11.601,12.199 c-7.093,0.324-12.816-5.33-12.803-12.195C12.204,46.516,17.936,41.195,24.417,41.311z M32.352,53.457 c-0.013-4.417-3.585-7.938-8.044-7.93c-4.301,0.008-7.905,3.638-7.895,7.955c0.011,4.367,3.611,7.958,7.992,7.97 C28.759,61.462,32.363,57.836,32.352,53.457z"
+                        ></path>
+                        <path
+                          d="M73.828,49.443c2.232-0.002,4.062,1.829,4.041,4.048c-0.022,2.224-1.821,4.026-4.016,4.027 c-2.26,0-4.077-1.786-4.072-3.999C69.785,51.223,71.55,49.445,73.828,49.443z"
+                        ></path>
+                        <path
+                          d="M24.396,49.407c2.266-0.002,4.087,1.808,4.096,4.067c0.009,2.24-1.829,4.079-4.084,4.084 c-2.309,0.005-4.09-1.779-4.088-4.1C20.32,51.179,22.097,49.41,24.396,49.407z"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__contact-us">
+        <h5>Contact Us</h5>
+        <div class="footer__contact-info">
+          <ul>
+            <li class="info-phone">
+              <span> <i class="fas fa-phone"></i> +1 800 603 6035 </span><br />
+              <span> <i class="fas fa-phone"></i> +1 800 603 6036 </span>
+              <a href="mailto:mail@umami.com" class="restaurant-link">
+                mail@umami.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copywrite">
+        <p>Copyright &copy; 2023 UMAMI. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </body>
+</html>

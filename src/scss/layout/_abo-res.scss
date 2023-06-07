@@ -1,0 +1,35 @@
+.about-us,
+.reservation {
+  padding: 6rem;
+  display: flex;
+  gap: 5.2rem;
+  align-items: center;
+
+  @media (max-width: $bp-largest) {
+    padding: 4rem 4rem 6rem 4rem;
+  }
+
+  @media (max-width: $bp-large) {
+    display: block;
+  }
+}
+
+.about-us .text,
+.reservation .text {
+  flex: 50%;
+  padding-bottom: 4rem;
+
+  @media (max-width: $bp-largest) {
+    padding-bottom: 3rem;
+  }
+
+  @media (max-width: $bp-large) {
+    padding: 0 2rem 4.5rem 2rem;
+  }
+}
+
+.image-container {
+  display: flex;
+  gap: 2rem;
+  flex: 50%;
+}

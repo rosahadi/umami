@@ -1,0 +1,109 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  align-items: start;
+  background-color: rgb(47, 47, 47);
+  padding: 6rem 6rem 2rem 6rem;
+  overflow: hidden;
+
+  @media (max-width: $bp-largest) {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  @media (max-width: $bp-small) {
+    padding: 6rem 1rem 1rem 1rem;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  &__logo {
+    grid-column: 1/-1;
+    transform: scale(1.5);
+    @media (max-width: $bp-large) {
+      transform: scale(1.2);
+    }
+  }
+
+  & ul {
+    list-style: none;
+  }
+
+  & a:link,
+  & a:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $color-primary;
+    display: block;
+    transition: $transition;
+    margin-top: 5px;
+  }
+
+  & a:hover,
+  & a:active {
+    color: $color-primary-light;
+  }
+
+  &__location {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__newsletter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__newsletter--form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-left: 5px;
+    margin-top: 0.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__newsletter--email-inp {
+    font-family: inherit;
+    width: 100%;
+    max-width: 30rem;
+    height: 5rem;
+    border: 1.6px solid $color-grey-light-2;
+    padding: 3px 1.25rem;
+  }
+
+  &__newsletter--btn {
+    background-color: $color-white;
+    border: 1.6px solid $color-primary;
+    // min-width: 4rem;
+    padding: 0.9rem 1.2rem;
+
+    @media (max-width: $bp-largest) {
+      padding: 0.6rem 1rem 0.4rem;
+    }
+
+    @media (max-width: $bp-small) {
+      padding: 0.5rem 1rem 0.3rem;
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  &__social-icons li {
+    width: 3rem;
+  }
+
+  &__contact-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copywrite {
+    grid-column: 1/-1;
+    margin-top: 4rem;
+  }
+}
