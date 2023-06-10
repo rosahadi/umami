@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "default": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": false
+  },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist --public-url ./"
@@ -11,7 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.2",
-    "parcel": "^2.9.2",
-    "sass": "^1.63.3"
+    "parcel": "^2.9.2"
   }
 }
