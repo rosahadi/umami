@@ -1,3 +1,5 @@
+'use strict';
+
 // Dots
 const dots = document.querySelectorAll('.dots > div');
 const dotOne = document.querySelector('.one');
